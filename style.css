@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: karla;
+    src: url(https://fonts.google.com/specimen/Karla);
+}
+body{
+    font-size: 16px;
+    font-family: karla,sans-serif;
+    background-color: hsl(204, 43%, 93%);
+    
+}
+main{
+    display: gird;
+    place-items: center;
+}
+.container{
+    width: 95%;
+    display: grid;
+   grid-template-areas: 'one' 'two' 'three';
+    padding: 20px;
+
+}
+.column-1{
+    grid-area: one;
+    padding: 25px;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.column-1 h1{
+    color: hsl(179, 62%, 43%);
+    font-size: 24px;
+   
+}
+.column-1 h2{
+    color: hsl(71, 73%, 54%);
+    font-size: 20px;
+    padding: 20px 0px;
+    font-weight: 400;
+}
+.column-1 p{
+    color: hsl(218, 22%, 67%);
+    line-height: 25px;
+    padding-right: 30px;
+}
+.column-2{
+    grid-area: two;
+    background-color: hsl(179, 62%, 43%);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.column-2 h1{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.column-2 h2{
+    color: white;
+    padding: 10px 0px;
+}
+.column-2 h2 span{
+    font-weight: 100;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.712);
+}
+.column-2 p{
+    color:rgba(255, 255, 255, 0.836);
+    margin-bottom: 20px;
+}
+.column-2 .sign-up{
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0px auto;
+    color: white;
+    font-weight: 600;
+}
+.column-3{
+    grid-area: three;
+    background-color: hsl(179, 64%, 48%);
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.column-3 h2{
+    color: white;
+    margin-bottom: 10px;
+}
+.column-3 ul{
+    list-style: none;
+    padding: 10px 0px;
+}
+.column-3 ul li{
+    color: rgba(255, 255, 255, 0.712);
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+@media (min-width:768px){
+    .container{
+        width: 60%;
+        grid-template-areas: 
+        'one one'
+         'two three';
+        margin: 0px auto;
+    }
+   
+    .column-2{
+       border-bottom-left-radius: 10px;
+    }
+    .column-3{
+        border-bottom-left-radius: 0px;
+    }
+    .column-2 p{
+      margin-bottom: 25px;
+      padding-top: 10px;
+    }
+    .column-2 .sign-up{
+        margin-top: 25px;
+    }
+    
+}
